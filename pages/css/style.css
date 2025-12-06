@@ -1,0 +1,323 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: #c9d6ff;
+  background: linear-gradient(to right, #e2e2e2, #c9d6ff);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  min-height: 65vh;
+}
+
+.container {
+  background-color: transparent;
+  border-radius: 10px;
+  /* box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35); */
+  width: 90%;
+  max-width: 480px;
+  /* min-height: 540px; */
+  min-height: 100vh;
+  padding: 30px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+}
+
+.container p {
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.3px;
+  margin: 20px 0;
+}
+
+.container span {
+  font-size: 12px;
+}
+
+.container a {
+  color: #333;
+  font-size: 13px;
+  text-decoration: none;
+  margin: 15px 0 10px;
+}
+
+.container button {
+  background-color: #232f3d;
+  color: #fff;
+  /* padding: 10px 45px; */
+  padding: 10px 20px;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.container button.hidden {
+  background-color: transparent;
+  border-color: #fff;
+}
+
+.container form {
+  background-color: transparent;
+  /* Use transparent to let the container's background show */
+  padding: 0 50px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.container input {
+  background-color: #eee;
+  border: none;
+  margin: 8px 0;
+  padding: 10px 15px;
+  font-size: 13px;
+  border-radius: 8px;
+  width: 100%;
+  /* Set max-width for larger screens */
+  outline: none;
+}
+
+.container.forgot-active {
+  min-height: 850px;
+  /* Increased height for forgot password form */
+}
+
+.container input,
+.container select {
+  /* Ensure inputs fill the form width */
+  max-width: 100%;
+  /* Overwrite the existing max-width for smaller screens */
+  box-sizing: border-box;
+  /* Ensures padding doesn't add to the width */
+}
+
+.sign-up {
+  display: block;
+  width: 100%;
+  background-color: white;
+  margin-top: 20px;
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0.5);
+  text-align: center;
+  border-radius: 12px;
+}
+
+.sign-up h1 {
+  margin-top: 45px;
+}
+
+.sign-in {
+  /* No absolute positioning needed anymore */
+  display: block;
+  align-items: center;
+  justify-content: center;
+  height: 520px;
+  border-radius: 12px;
+  background-color: white;
+}
+
+.sign-in h1 {
+  margin-top: 45px;
+}
+
+select.inputs {
+  background-color: #eee;
+  border: none;
+  margin: 8px 0;
+  padding: 10px 15px;
+  font-size: 13px;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 350px;
+  outline: none;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3E%3Cpath fill='%23333' d='M2 0L0 2h4L2 0zM2 5L0 3h4L2 5z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 8px 10px;
+}
+
+.sign-up,
+.forgot-password,
+.terms-and-conditions {
+  display: none;
+}
+
+/* .container.active .sign-in {
+  transform: translateX(100%);
+} */
+
+/* TERMS AND CONDITIONS RELATED STYLES */
+.container.terms-active .show-password-container,
+.container.terms-active .toogle-container {
+  display: none;
+  margin-left: 0;
+  width: 100%;
+  /* Hide both the form and the toggle container */
+}
+
+.terms-and-conditions {
+  display: none;
+  /* Hidden by default */
+  position: absolute;
+  /* Absolute positioning to cover the entire container */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  z-index: 1000;
+  /* Ensure it is on top */
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+  /* Optional: Add shadow for depth */
+}
+
+.container.terms-active .terms-and-conditions {
+  display: block;
+  /* Show the Terms and Conditions section */
+}
+
+/* FORGOT PASSWORD SECTION */
+.forgot-password {
+  display: none;
+  position: relative;
+  width: 100%;
+  background-color: white;
+  padding: 30px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  text-align: center;
+}
+
+.forgot-password h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+.forgot-password input {
+  width: 80%;
+  /* Make the input fields fit better */
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.forgot-password button {
+  padding: 10px 20px;
+  background-color: #232f3d;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.container.forgot-active .forgot-password {
+  display: block;
+  /* Ensure the form is visible when 'forgot-active' is triggered */
+}
+
+.container.forgot-active .sign-in,
+.container.forgot-active .sign-up,
+.container.forgot-active .toogle-container {
+  display: none;
+  /* Hide other forms when forgot-password is active */
+}
+
+/* FORM CONTROLS STYLES */
+.show-password-container,
+.terms-container {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  margin-right: 3px;
+  width: 80%;
+  margin-left: 0;
+  width: 100%;
+  /* Move the entire show-password container to the right */
+}
+
+.show-password-container label,
+.terms-container label {
+  margin-left: 8px;
+  font-size: 14px;
+}
+
+.terms-container {
+  display: flex;
+  align-items: center;
+  margin-top: 15px;
+}
+
+.show-password-container input[type="checkbox"],
+.terms-container input[type="checkbox"] {
+  width: 20px;
+  /* Adjust the size of the checkbox */
+  height: 18px;
+  margin-left: 3px;
+}
+
+/* BUTTON STYLES */
+button[type="submit"] {
+  margin-top: 20px;
+  width: 100%;
+  /* Ensure the button takes full width */
+  max-width: 350px;
+  /* Adjust as needed */
+  padding: 12px;
+  background-color: #232f3d;
+  color: white;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+}
+
+
+.account-link {
+  margin-top: 25px;
+  font-size: 14px;
+  color: #666;
+}
+
+.account-link a {
+  color: #febd69;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.account-link a:hover {
+  text-decoration: underline;
+}
+
+/* For tablets or larger screens */
+@media screen and (min-width: 768px) {
+
+  .container input,
+  .container select {
+    max-width: 350px;
+  }
+}
+
+/* For desktops and larger (naka-landscape) */
+@media screen and (min-width: 1024px) {
+  .container {
+    width: 480px;
+  }
+
+  .container button {
+    padding: 10px 45px;
+  }
+}

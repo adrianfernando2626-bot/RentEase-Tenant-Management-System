@@ -1,0 +1,95 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    min-height: 100vh;
+    color: #555;
+    background-color: #fff;
+}
+
+h2 {
+    text-align: center;
+    padding-bottom: 50px;
+}
+
+.chart {
+    width: 700px;
+    height: 350px;
+    padding: 50px;
+    margin: 0 auto;
+}
+
+.users-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 20px;
+    /* Add space between the boxes */
+}
+
+.users,
+.users1 {
+    background: white;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    width: 23%;
+    /* Adjust width to fit horizontally */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    color: #444343;
+    text-align: left;
+    /* Align text to the left */
+}
+
+.number-size {
+    font-size: 50px;
+}
+
+.users h4,
+.users1 h4 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav_icon {
+    margin-right: 10px;
+    /* Space between the heading and the icon */
+}
+
+.users i,
+.users1 i {
+    font-size: 1.5em;
+    /* Adjust icon size */
+    background-color: #f0f0f0;
+    /* Light background color for the icon */
+    padding: 10px;
+    /* Space around the icon */
+    border-radius: 50%;
+    /* Makes the icon rounded */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    /* Adding box-shadow to icon */
+    color: #7a2f2f;
+    /* Icon color set to green */
+    transition: all 0.3s ease;
+    /* Smooth transition for hover effect */
+}
+
+.users i:hover,
+.users1 i:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    /* Slightly stronger shadow on hover */
+    background-color: #e0e0e0;
+    /* Slightly darker background on hover */
+}
+
+.table {
+    align-items: center;
+}
